@@ -37,10 +37,14 @@ const Title = styled.h2`
 
 /**
  * Render a LineChart with user average sessions Data
+ * average:array of objects
+ * @return {string} day
+ * @return {number} sessionLenght
  * @return {JSX}
  */
 
 export function Average_sessions({ average }) {
+  console.log(average)
   const [index, setIndex] = useState(null);
   return (
     <Container>

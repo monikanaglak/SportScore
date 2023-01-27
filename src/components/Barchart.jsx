@@ -63,9 +63,9 @@ const Info = styled.div`
 /**
  * Render a BarChart with data of user activity
  * @sessions:array of objects
- * @session.day:number,
- * @session.kilogram:number,
- * @session.calories:number,
+ * @{number} day
+ * @{number} kilogram
+ * @{number} calories
  * @return {JSX}
  */
 export function Barchart_compo({ sessions }) {

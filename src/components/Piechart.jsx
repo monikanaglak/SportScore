@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import {
   RadialBarChart,
   RadialBar,
@@ -8,24 +9,18 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 import { UserApi } from "../pages/userApi";
+
 const Wrapper = styled.div`
-width:200px;
-height:320px;
-background-color: #fbfbfb;
+  width: 200px;
+  height: 320px;
+  background-color: #fbfbfb;
+  position: relativ;
+`;
 
-
-`
-const Test = styled.div`
-transform:rotate(45deg);
-border:2px solid red;
-
-
-`
-const Rotation = styled.div`
-
-transform: rotate(-45deg);
-
-`
+const Score = styled.div`
+  z-index: 9999;
+  position: absolute;
+`;
 
 /**
  * RadialBarChart of recharts, represents score of the user
@@ -34,11 +29,11 @@ transform: rotate(-45deg);
  * @return {JSX}
  */
 export function ScoreChart({ todayScore, score }) {
-  
   const differents_scores = [{ value: todayScore || score }];
   return (
     <Wrapper>
-      <h4>Score</h4>
+      <Score>Score</Score>
+
       <ResponsiveContainer width="100%" aspect={1}>
         <RadialBarChart
           cx="50%"
@@ -47,15 +42,16 @@ export function ScoreChart({ todayScore, score }) {
           width="100%"
           height="100%"
           margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
-          innerRadius={70}
+          innerRadius={80}
+          outerRadius={120}
           barSize={10}
           data={differents_scores}
-          startAngle={-120}
-          endAngle={-450}
+          startAngle={90}
+          endAngle={360}
+          className="momo"
         >
-          
           <circle cx="50%" cy="50%" fill="white" r="82"></circle>
-         
+
           <PolarAngleAxis
             type="number"
             domain={[0, 100]}
@@ -77,8 +73,8 @@ export function ScoreChart({ todayScore, score }) {
             fill="#282D30"
             x="50%"
             y="45%"
-            textAnchor="middle"
-          >{`${todayScore ? todayScore * 100 : score * 100}%`}</text>
+            >{`${todayScore ? todayScore * 100 : score * 100}%`}</text>
+          
           <text
             className="graphTitle"
             fontWeight="500"
@@ -99,6 +95,7 @@ export function ScoreChart({ todayScore, score }) {
           >
             objectif
           </text>
+      
         </RadialBarChart>
       </ResponsiveContainer>
     </Wrapper>
@@ -106,5 +103,5 @@ export function ScoreChart({ todayScore, score }) {
 }
 ScoreChart.propTypes = {
   todayScore: PropTypes.number,
-  score: PropTypes.number
+  score: PropTypes.number,
 };

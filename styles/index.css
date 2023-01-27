@@ -9,7 +9,14 @@ body {
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
-
+.momo {
+  margin-top:30px;
+  margin-left:10px;
+  transform: rotate(-75deg);
+}
+.scoreSize{
+  color:red;
+}
 .icon {
   width: 30px;
   height: 30px;
@@ -30,13 +37,12 @@ body {
   margin-left: 50px;
 }
 
-.first{
+.first {
   display: flex;
 }
 .diagramms {
   display: flex;
 }
-
 
 .test h2 {
   font-size: 48px;
@@ -45,7 +51,6 @@ body {
 .name {
   color: red;
 }
-
 
 .border,
 .explenation {
@@ -86,5 +91,3 @@ p.type_name {
   display: flex;
   flex-direction: column;
 }
-
-
