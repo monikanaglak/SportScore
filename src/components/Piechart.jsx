@@ -11,15 +11,37 @@ import PropTypes from "prop-types";
 import { UserApi } from "../pages/userApi";
 
 const Wrapper = styled.div`
-  width: 200px;
-  height: 320px;
+  width: 260px;
+  height: 250px;
   background-color: #fbfbfb;
-  position: relativ;
+  position: relative;
 `;
 
 const Score = styled.div`
   z-index: 9999;
   position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 5px;
+`;
+const Matisse = styled.div`
+  display: flex;
+  flex-direction: column;
+  .chiffre {
+    position:absolute;
+    top:100px;
+    left:115px;
+    font-weight: 600;
+    font-size:28px;
+  }
+  .expl{
+    font-size:18px;
+    font-weight:500;
+    position:absolute;
+    top:133px;
+    left:108px;
+  }
 `;
 
 /**
@@ -38,7 +60,6 @@ export function ScoreChart({ todayScore, score }) {
         <RadialBarChart
           cx="50%"
           cy="50%"
-          style={{ backgroundColor: "#FBFBFB" }}
           width="100%"
           height="100%"
           margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
@@ -50,7 +71,13 @@ export function ScoreChart({ todayScore, score }) {
           endAngle={360}
           className="momo"
         >
-          <circle cx="50%" cy="50%" fill="white" r="82"></circle>
+          <circle
+            cx="50%"
+            cy="50%"
+            fill="white"
+            r="82"
+            className="momo"
+          ></circle>
 
           <PolarAngleAxis
             type="number"
@@ -66,12 +93,12 @@ export function ScoreChart({ todayScore, score }) {
             cornerRadius="10"
             data={[UserApi] ? [UserApi] : [user_Data]}
           />
-          <text
+          {/* <text
             className="scoreSize"
             fontWeight="700"
             fontSize={26}
             fill="#282D30"
-            x="50%"
+            x="40%"
             y="45%"
             >{`${todayScore ? todayScore * 100 : score * 100}%`}</text>
           
@@ -94,10 +121,18 @@ export function ScoreChart({ todayScore, score }) {
             textAnchor="middle"
           >
             objectif
-          </text>
-      
+  </text>*/}
         </RadialBarChart>
       </ResponsiveContainer>
+      <Matisse>
+        <p className="chiffre">{`${
+          todayScore ? todayScore * 100 : score * 100
+        }%`}</p>
+        <div className="expl">
+        <p>de votre</p>
+        <p>objectif</p>
+        </div>
+      </Matisse>
     </Wrapper>
   );
 }

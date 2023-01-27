@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const Wrapper = styled.div`
-width:200px;
+width:250px;
 height:250px;
 background-color: #282d30;
 `
