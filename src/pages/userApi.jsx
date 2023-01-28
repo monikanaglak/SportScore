@@ -10,21 +10,32 @@ import { RadarCh } from "../components/Radarchart";
 import { ScoreChart } from "../components/Piechart";
 import { apiCalls } from "../utils/calls";
 import styled from "styled-components";
-const Monika = styled.div`
-  width: 1300px;
+const Container = styled.div`
   display: flex;
+  width: 100%;
+`;
+const Allinside = styled.div`
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
 `;
 const Main = styled.div`
   display: flex;
+`;
+const ContainerAsside = styled.div`
+  height: 740px;
+`;
+const Ass = styled.div`
+  margin-left: 10px;
 `;
 const Article = styled.div`
   margin-top: 1px;
 `;
 const Diagrams = styled.div`
-  margin-top: 1px;
-  display:flex;
-  margin-left:50px;
-  gap:20px;
+  display: flex;
+  margin-left: 50px;
+  gap: 10px;
+  margin-top: -60px;
 `;
 export function UserApi() {
   const { id } = useParams();
@@ -36,7 +47,6 @@ export function UserApi() {
   useEffect(() => {
     const fetchData = async () => {
       const dataApiUser = await apiCalls.getUser(id);
-      console.log(dataApiUser);
       setUserApi(dataApiUser);
 
       const dataApiUserActivity = await apiCalls.getUserActivity(id);
@@ -62,7 +72,7 @@ export function UserApi() {
       setUserApiPerformance(format_performance);
 
       let dataApiSessions = await apiCalls.getUserAverageSession(id);
-      
+
       const format_data = dataApiSessions.sessions.map((data) => {
         switch (data.day) {
           case 1:
@@ -87,19 +97,21 @@ export function UserApi() {
   }, []);
 
   if (!userApi || !userApiPerformance || !userApiSessions || !userApiActivity) {
-    return <h2>Loading...</h2>;
+    return <h2>API n'est pas disponible...</h2>;
   }
   return (
-    <>
+    <Allinside>
       <Header />
-      <Monika>
-        <Asside/>
-          <Main>
-            <Article>
-              <div className="greet">
-                <Greetings name={userApi.userInfos.firstName}></Greetings>
-                <Barchart_compo sessions={userApiActivity.sessions} />
-              </div>
+      <Container>
+        <ContainerAsside>
+          <Asside />
+        </ContainerAsside>
+        <Main>
+          <Article>
+            <div className="greet">
+              <Greetings name={userApi.userInfos.firstName}></Greetings>
+              <Barchart_compo sessions={userApiActivity.sessions} />
+            </div>
             <Diagrams>
               <Average_sessions average={userApiSessions} />
               <RadarCh performance={userApiPerformance} />
@@ -109,16 +121,16 @@ export function UserApi() {
               />
             </Diagrams>
           </Article>
-          <div className="cos">
-            <Macrocard calorie={userApi.keyData.calorieCount}
-            proteines={userApi.keyData.proteinCount}
-            carbohydrateCount={userApi.keyData.carbohydrateCount}
-            lipidCount={userApi.keyData.lipidCount} 
+          <Ass>
+            <Macrocard
+              calorie={userApi.keyData.calorieCount}
+              proteines={userApi.keyData.proteinCount}
+              carbohydrateCount={userApi.keyData.carbohydrateCount}
+              lipidCount={userApi.keyData.lipidCount}
             />
-          </div>
+          </Ass>
         </Main>
-      </Monika>
-    </>
+      </Container>
+    </Allinside>
   );
 }
-

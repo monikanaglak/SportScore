@@ -1,27 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import fel from "../../public/images/fel.svg";
 const Wrapper = styled.div`
-width:1000px;
-height:100px;
-margin-top:50px;
-
-`
+  height: 80px;
+  width: 355px;
+  margin-top: 20px;
+`;
 const Bonjour = styled.div`
-display:flex;
-gap:20px;
-font-size:26px;
-`
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight:400;
+`;
 const Header = styled.div`
-display:flex;
-flex-direction:column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 const Felicitations = styled.div`
-display:flex;
-font-size:20px;
-font-wieght:500;
-margin-top:10px;
-`
+  display: flex;
+  font-size: 16px;
+  font-wieght: 500;
+  margin-top: 10px;
+`;
 export function Greetings({ name }) {
   return (
     <Wrapper>
@@ -31,7 +32,7 @@ export function Greetings({ name }) {
           <h1 className="name">{name}</h1>
         </Bonjour>
         <Felicitations>
-          Félicitations! Vous avez explosé votre objectif hier!
+          <img src={fel} alt="slogan"></img>
         </Felicitations>
       </Header>
     </Wrapper>

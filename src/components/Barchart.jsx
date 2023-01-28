@@ -14,19 +14,25 @@ import ActivityToolType from "./ActivityToolType";
 
 const Wrapper = styled.div`
   margin-bottom: 3em;
-  height: 320px;
+  height: 300px;
   border-radius: 5px;
   background-color: #fbfbfb;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-  @media (max-width: 1200px) {
+  @media (max-width: 1025px) {
     padding-left: 0;
   }
-  width:800px;
-
+  width:650px;
+  
 `;
+const Container = styled.div`
+  height: 250px;
+  width: 650px;
+  background-color: #fbfbfb;
+`
 const Head = styled.div`
   display: flex;
   justify-content:space-between;
+  margin-top:4%;
 `;
 
 const Title = styled.h2`
@@ -53,7 +59,7 @@ const Icon = styled.div`
 
 const Legend = styled.div`
   display: flex;
-  
+
 `;
 
 const Info = styled.div`
@@ -84,7 +90,7 @@ export function Barchart_compo({ sessions }) {
           </Info>
         </Legend>
       </Head>
-      <div className="wrapper_barchart">
+      <Container>
         <ResponsiveContainer>
           <BarChart barGap={8} barCategoryGap={1} data={sessions}>
             <CartesianGrid vertical={false} strokeDasharray="1 1" />
@@ -132,7 +138,7 @@ export function Barchart_compo({ sessions }) {
           </BarChart>
         </ResponsiveContainer>
         
-      </div>
+      </Container>
     </Wrapper>
   );
 }

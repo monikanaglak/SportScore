@@ -3,14 +3,14 @@ import yoga from "../../public/images/yoga.svg";
 import bike from "../../public/images/bike.svg";
 import swimming from "../../public/images/swimming.svg";
 import musculation from "../../public/images/musculation.svg";
-
+import copy from "../../public/images/copy.png"
 const Wrapper = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: black;
   width: 10vw;
-  height: 780px;
+  max-height: 750px;
 `;
 const Box = styled.div`
   width: 50px;
@@ -23,7 +23,15 @@ const Box = styled.div`
   border-radius: 6px;
   background-color: white;
 `;
+const Copy= styled.div`
+ margin-bottom:200px;
+ width:10px;
+ height:20px;
 
+ .copy{
+  margin-top:50px;
+ }
+`;
 export function Asside() {
   return (
     <Wrapper>
@@ -39,6 +47,9 @@ export function Asside() {
       <Box>
         <img src={musculation} alt="logo" className="musculation icon"></img>
       </Box>
+      <Copy>
+      <img src={copy} alt="logo" className="copy"></img>
+      </Copy>
     </Wrapper>
   );
 }

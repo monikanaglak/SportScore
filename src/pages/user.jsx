@@ -10,21 +10,33 @@ import { Average_sessions } from "../components/Average_sessions";
 import { RadarCh } from "../components/Radarchart";
 import { ScoreChart } from "../components/Piechart";
 import styled from "styled-components";
-const Monika = styled.div`
-  width: 1300px;
+const Container = styled.div`
   display: flex;
+  width: 100%;
+`;
+const Allinside = styled.div`
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
 `;
 const Main = styled.div`
   display: flex;
+`;
+const ContainerAsside = styled.div`
+  height: 740px;
+`;
+const Ass = styled.div`
+  margin-left: 10px;
 `;
 const Article = styled.div`
   margin-top: 1px;
 `;
 const Diagrams = styled.div`
   margin-top: 1px;
-  display:flex;
-  margin-left:50px;
-  gap:20px;
+  display: flex;
+  margin-left: 30px;
+  gap: 10px;
+  margin-top: -60px;
 `;
 export function User() {
   let { id } = useParams();
@@ -86,10 +98,12 @@ export function User() {
   }
 
   return (
-    <>
+    <Allinside>
       <Header />
-      <Monika>
-        <Asside />
+      <Container>
+        <ContainerAsside>
+          <Asside />
+        </ContainerAsside>
         <Main>
           <Article>
             <div className="greet">
@@ -102,16 +116,16 @@ export function User() {
               <ScoreChart {...user_Data} />
             </Diagrams>
           </Article>
-          <div className="cos">
+          <Ass>
             <Macrocard
               calorie={user_Data.keyData.calorieCount}
               proteines={user_Data.keyData.proteinCount}
               carbohydrateCount={user_Data.keyData.carbohydrateCount}
               lipidCount={user_Data.keyData.lipidCount}
             />
-          </div>
+          </Ass>
         </Main>
-      </Monika>
-    </>
+      </Container>
+    </Allinside>
   );
 }

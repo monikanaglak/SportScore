@@ -15,12 +15,11 @@ import SessionsToolType from "./SessionsToolType.jsx";
 
 const Container = styled.div`
   position: relative;
-  width: 268px;
-  height: 250px;
+  width: 225px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
   background: #ff0000;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
@@ -31,8 +30,9 @@ const Title = styled.h2`
   position: absolute;
   font-weight: 600;
   font-size: 15px;
-  padding: 25px 34px 2px 14px;
+  padding: 10px 34px 2px 14px;
   color: rgba(255, 255, 255, 0.7);
+  opacity:70%;
 `;
 
 /**

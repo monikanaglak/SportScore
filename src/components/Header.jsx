@@ -7,20 +7,20 @@ const Head = styled.header`
   position: relative;
   display: flex;
   align-items:center;
-  width: 100%;
+  max-width: 1080px;
   height: 91px;
   background: #020203;
   padding: 0 87px 0 29px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
   img {
-    width: 148px;
+    width: 158px;
     margin-right: 150px;
     height:65px;
   }
 `;
 const Nav = styled.nav`
-  width: 80%;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;

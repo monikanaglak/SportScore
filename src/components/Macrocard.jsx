@@ -2,21 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 const Container = styled.div`
-  width: 100px;
+  width: 200px;
   display: flex;
-  margin-top: 50px;
+  margin-top: 110px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  
+  justify-content:center;
+  align-items:center;
+  gap: 20px;
 `;
 const Article = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 150px;
+  width: 180px;
+  height: 110px;
   background-color: #fbfbfb;
 `;
 
@@ -30,8 +29,8 @@ const Fire = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
   background: #fceced;
   opactity: 6%;
@@ -45,10 +44,10 @@ const Blue = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
-  background:#d9eefd;
+  background: #d9eefd;
   opactity: 6%;
   .something {
     width: 30px;
@@ -60,10 +59,10 @@ const Apple = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
-  background:#fdfdec;
+  background: #fdfdec;
   opactity: 6%;
   .something {
     width: 30px;
@@ -75,10 +74,10 @@ const Hambourger = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
-  background:#fcebfc;
+  background: #fcebfc;
   opactity: 6%;
   .something {
     width: 30px;
@@ -88,8 +87,18 @@ const Hambourger = styled.div`
 `;
 
 const Text = styled.div`
-  width: 100px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
+  margin-left: 10px;
+
+  .type {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .type_name {
+    font-weight: 400;
+    font-size: 16px;
+  }
 `;
 
 export function Macrocard({

@@ -3,21 +3,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-body {
-  max-width: 1360px;
-  margin: auto;
   font-family: "Roboto", sans-serif;
 }
+
 .momo {
-  margin-top:10px;
-  margin-left:10px;
+  margin-top: 10px;
+  margin-left: 10px;
   transform: rotate(-75deg);
   background-color: blanc;
+ 
 }
-.scoreSize{
-  color:red;
+.scoreSize {
+  color: red;
 }
+
 .icon {
   width: 30px;
   height: 30px;
@@ -36,6 +35,7 @@ body {
 
 .greet {
   margin-left: 50px;
+ 
 }
 
 .first {
@@ -53,27 +53,7 @@ body {
   color: red;
 }
 
-.border,
-.explenation {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-}
-p.type {
-  font-weight: 700;
-  font-size: 24px;
-}
-p.type_name {
-  font-weight: 400;
-  font-size: 20px;
-}
+
 .header_page {
   display: flex;
   flex-direction: column;
@@ -83,12 +63,12 @@ p.type_name {
 .header_page .name {
   margin-left: 20px;
 }
-.wrapper_barchart {
-  height: 300px;
-  width: 800px;
-  background-color: #fbfbfb;
-}
+
 .flex_column {
   display: flex;
   flex-direction: column;
+}
+body {
+  margin: auto;
+  height: 780px;
 }
