@@ -14,7 +14,7 @@ import ActivityToolType from "./ActivityToolType";
 
 const Wrapper = styled.div`
   margin-bottom: 3em;
-  height: 300px;
+  height: 280px;
   border-radius: 5px;
   background-color: #fbfbfb;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   
 `;
 const Container = styled.div`
-  height: 250px;
+  height: 230px;
   width: 650px;
   background-color: #fbfbfb;
 `

@@ -44,7 +44,6 @@ const Title = styled.h2`
  */
 
 export function Average_sessions({ average }) {
-  console.log(average)
   const [index, setIndex] = useState(null);
   return (
     <Container>

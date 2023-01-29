@@ -266,7 +266,6 @@ export class mocked_Data {
   static get_mock_user_info(id) {
     let _data = USER_MAIN_DATA;
     _data = _data.find((user) => user.id == id);
-    console.log(_data);
     return _data;
   }
 

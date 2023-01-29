@@ -14,8 +14,9 @@ import { UserApi } from "../pages/userApi";
 const Wrapper = styled.div`
   width: 225px;
   height: 200px;
-  background-color: #fbfbfb;
+  background:#fbfbfb;
   position: relative;
+ 
 `;
 
 const Score = styled.div`
@@ -32,9 +33,9 @@ const Informations = styled.div`
   .chiffre {
     position:absolute;
     top:70px;
-    left:85px;
+    left:80px;
     font-weight: 600;
-    font-size:28px;
+    font-size:24px;
   }
   .expl{
     font-size:16px;

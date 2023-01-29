@@ -16,8 +16,9 @@ font-weight: 500;
 font-size: 10px;
 line-height: 24px;
 margin-top:7px;
+
 `
-/** create a custom tooltype for the user activity barChart
+/** create a custom tooltype for the user activity BarChart
  * @param  {bool} active
  * @param  {array} payload
  * @return {JSX}

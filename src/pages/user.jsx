@@ -36,7 +36,7 @@ const Diagrams = styled.div`
   display: flex;
   margin-left: 30px;
   gap: 10px;
-  margin-top: -60px;
+  margin-top: -40px;
 `;
 export function User() {
   let { id } = useParams();

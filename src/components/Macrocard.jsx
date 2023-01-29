@@ -107,6 +107,7 @@ export function Macrocard({
   carbohydrateCount,
   lipidCount,
 }) {
+  console.log(calorie)
   return (
     <>
       <Container>

@@ -10,8 +10,7 @@
   margin-top: 10px;
   margin-left: 10px;
   transform: rotate(-75deg);
-  background-color: blanc;
- 
+  background-color: transparent;
 }
 .scoreSize {
   color: red;
@@ -35,7 +34,6 @@
 
 .greet {
   margin-left: 50px;
- 
 }
 
 .first {
@@ -52,7 +50,6 @@
 .name {
   color: red;
 }
-
 
 .header_page {
   display: flex;

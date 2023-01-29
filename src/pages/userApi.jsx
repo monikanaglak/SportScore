@@ -35,7 +35,7 @@ const Diagrams = styled.div`
   display: flex;
   margin-left: 50px;
   gap: 10px;
-  margin-top: -60px;
+  margin-top: -40px;
 `;
 export function UserApi() {
   const { id } = useParams();

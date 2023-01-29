@@ -5,8 +5,6 @@ export class apiCalls {
 static async getUser(id) {
     const user = await fetch(`http://localhost:3000/user/${id}`);
     const data = await user.json();
-    console.log(data.data.userInfos)
-    console.log(data.data)
     return (data.data)
     }
 static async getUserActivity(id){
